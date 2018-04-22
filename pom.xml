@@ -16,6 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+      <version.slf4j>1.6.6</version.slf4j>
+      <version.spring>4.1.5.RELEASE</version.spring>
   </properties>
 
   <dependencies>
@@ -26,19 +28,33 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!--添加 SLF4j依赖-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${version.slf4j}</version>
+    </dependency>
 
+    <!--添加spring依赖-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.1.1.RELEASE</version>
+      <version>${version.spring}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${version.spring}</version>
     </dependency>
 
+    <!--添加netty依赖-->
     <dependency>
       <groupId>io.netty</groupId>
       <artifactId>netty-all</artifactId>
       <version>4.0.18.Final</version>
     </dependency>
 
+    <!--添加序列化协议Protostuff协议依赖-->
     <dependency>
       <groupId>com.dyuproject.protostuff</groupId>
       <artifactId>protostuff-core</artifactId>
@@ -49,12 +65,13 @@
       <artifactId>protostuff-runtime</artifactId>
       <version>1.0.8</version>
     </dependency>
-
+    <!--添加ZooKeeper依赖-->
     <dependency>
       <groupId>org.apache.zookeeper</groupId>
       <artifactId>zookeeper</artifactId>
       <version>3.4.8</version>
     </dependency>
+    <!--添加 apache commons Collections -->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-collections4</artifactId>
@@ -66,7 +83,7 @@
       <artifactId>objenesis</artifactId>
       <version>2.1</version>
     </dependency>
-
+    <!--添加cglib动态代理依赖-->
     <dependency>
       <groupId>cglib</groupId>
       <artifactId>cglib</artifactId>
