@@ -11,4 +11,6 @@ public interface ServiceDiscovery {
      * @return
      */
     public String discover(String serviceName);
+
+    public void stop();
 }
