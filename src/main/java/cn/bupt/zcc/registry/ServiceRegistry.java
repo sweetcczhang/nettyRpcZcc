@@ -12,4 +12,6 @@ public interface ServiceRegistry {
      * @param serviceAddress  服务地址
      */
     public void registry(String serviceName, String serviceAddress);
+
+    public void registry(String serviceAddress);
 }
